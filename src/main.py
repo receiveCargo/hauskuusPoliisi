@@ -20,6 +20,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text="En ole vielä valmis, painu vittuun!")
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    print(update.message.text) 
+    print(update.message.from_user)
+    print(update.message.chat)
+    print(update.message_reaction)
     await update.message.reply_text(update.message.text)
 
 def main() -> None:
